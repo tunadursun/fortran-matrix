@@ -1,7 +1,7 @@
 ! 090200133 Tuna Dursun
 
-!   We are asked to create two matrices called matTD and avematTD with the last digit of our student number plus one times nineteen rows and the last
-! digit of our student number plus one times twenty three columns. Filling the matTD matrix using the sum formula given in the question. Next, we fill
+!   We are asked to create two matrices called matTD and avematTD with the last digit of our student number plus one time nineteen rows and the last
+! digit of our student number plus one time twenty-three columns. Filling the matTD matrix using the sum formula given in the question. Next, we fill
 ! the avematTD matrix with the corresponding elements in the matTD matrix and the arithmetic average of their nearest neighbors (that element and its nearest neighbors).
 ! Then we add all the elements in the avematTD matrix and take their average. We assign this as averageTD. Finally, we print the averageTD to the screen.
  
@@ -12,13 +12,13 @@ integer,parameter::NrowTD=4*19
 ! NrowTD is a constant integer type variable. I created it to calculate the number of rows of the matrices called matTD and avematTD that I will create.
 ! The last digit of my student number is 3. And the formula is "(student number's last digit + 1)*19".
 integer,parameter::NcolTD=4*23
-! NcolTD is a constant integer type variable. I created it to calculate the number of column of the matrices called matTD and avematTD that I will create.
+! NcolTD is a constant integer type variable. I created it to calculate the number of columns of the matrices called matTD and avematTD that I will create.
 ! The last digit of my student number is 3. And the formula is "(student number's last digit + 1)*23".
 real,dimension(NrowTD,NcolTD)::matTD,avematTD 
-! I have created two matrix that called matTD and avematTD and constisting of real type variable. And the dimension of these matrices is (NrowTD,Ncol,TD).  
+! I have created two matrices called matTD and avematTD and consisting of the real type variable. And the dimension of these matrices is (NrowTD, Ncol,TD).  
 real::averageTD ! This is a real type variable. 
-integer::i,j !i and j are integer type variable.
-integer::kTD=0 ! kTD is a integer type variable and equal to zero.
+integer::i,j !i and j are integer type variables.
+integer::kTD=0 ! kTD is an integer type variable and equal to zero.
 
 
 ! With this loop, we calculate each element of matTD one by one with the formula and fill it in the matrix.
@@ -79,7 +79,7 @@ do j=1,size(avematTD,2)! It means that j=1 and the loop will continue until j=si
 end do    
 
 averageTD=sum(avematTD)/(size(avematTD,1)*size(avematTD,2))
-! Add all the numbers in the matrix with the sum command and divide this sum by the size(avematTD,1)*size(avematTD,2). Assign result as averageTD.
+! Add all the numbers in the matrix with the sum command and divide this sum by the size(avematTD,1)*size(avematTD,2). Assign the result as averageTD.
 print*,"The value of averageTD is:",averageTD ! Print the value of averageTD on the screen.
 
 end program dursunt20
